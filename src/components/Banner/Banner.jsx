@@ -76,11 +76,13 @@ const Banner = () => {
                                     ❌
                                 </h2>
                             </div>
-                            <form onSubmit={handleSubmit}>
+                            {/* <form onSubmit={handleSubmit} action="https://getform.io/f/bolglvja" method="POST"> */}
+                                <form action="https://getform.io/f/bolglvja" method="POST">
                                 <div className="mb-4">
                                     <input
                                         type="email"
                                         id="email"
+                                        name="email"
                                         placeholder="Work Email"
                                         className={`w-full px-3 py-2 border-b border-gray-300 rounded ${errors.email && 'border-red-500'}`}
                                         value={email}
@@ -93,6 +95,7 @@ const Banner = () => {
                                         <input
                                             type="text"
                                             id="firstName"
+                                            name="firstName"
                                             placeholder="First Name"
                                             className={`w-full px-3 py-2 border-b border-gray-300 rounded ${errors.firstName && 'border-red-500'}`}
                                             value={firstName}
@@ -104,6 +107,7 @@ const Banner = () => {
                                         <input
                                             type="text"
                                             id="lastName"
+                                            name="lastName"
                                             placeholder="Last Name"
                                             className={`w-full px-3 py-2 border-b border-gray-300 rounded ${errors.lastName && 'border-red-500'}`}
                                             value={lastName}
@@ -118,6 +122,7 @@ const Banner = () => {
                                             type="checkbox"
                                             className="form-checkbox"
                                             checked={isChecked}
+                                            name="subscribe" value="yes"
                                             onChange={(e) => setIsChecked(e.target.checked)}
                                         />
                                         <span className="ml-2">I agree to Fyles terms and conditions, and provide consent to send me communication.</span>
